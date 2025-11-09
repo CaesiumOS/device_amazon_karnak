@@ -1,8 +1,5 @@
 # Default heap sizes. Allow up to 256m for large heaps to make sure a single app
 # doesn't take all of the RAM.
-PRODUCT_VENDOR_PROPERTIES += \
-  dalvik.vm.heapgrowthlimit=128m \
-  dalvik.vm.heapsize=256m
 
 # Set lowram options
 PRODUCT_SYSTEM_PROPERTIES += \
