@@ -1,22 +1,6 @@
 # Default heap sizes. Allow up to 256m for large heaps to make sure a single app
 # doesn't take all of the RAM.
 
-# Set lowram options
-PRODUCT_SYSTEM_PROPERTIES += \
-  ro.lmk.critical_upgrade=true \
-  ro.lmk.upgrade_pressure=60 \
-  ro.lmk.downgrade_pressure=60 \
-  ro.lmk.kill_heaviest_task=true \
-  ro.lmk.kill_timeout_ms=100 \
-  ro.lmk.use_minfree_levels=true \
-  ro.lmk.use_new_strategy=true \
-  ro.lmk.log_stats=false
-
-
-# set threshold to filter unused apps
-PRODUCT_SYSTEM_PROPERTIES += \
-  pm.dexopt.downgrade_after_inactive_days=7
-
 # set the compiler filter for shared apks to quicken.
 # Rationale: speed has a lot of dex code expansion, it uses more ram and space
 # compared to quicken. Using quicken for shared APKs on Go devices may save RAM.
